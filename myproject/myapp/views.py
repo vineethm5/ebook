@@ -46,7 +46,7 @@ def signup(req):
 
 @login_required
 def addBook(req,id):
-    # user=User.objects.get(id=user_id)
+    user=User.objects.get(id=user_id)
     return render(req,"addbook.html")
 
 def logout(req):
@@ -58,3 +58,6 @@ def contri(req,userid):
 
 def addBook(req,userid):
     pass
+
+
+#https://www.geeksforgeeks.org/e-book-library-using-django/?ref=ml_lbp

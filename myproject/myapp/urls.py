@@ -8,10 +8,13 @@ urlpatterns=[
     path("",home,name='home'),
     path("login/",login,name='login'),
     path("signup/",signup,name='signup'),
-    # path("addBook/<int:user_id>",addBook,name='addbook'),
     path("logout/",logout,name='logout'),
-    path("contri/<int:user_id>",contri,name="contri"),
     path("addBook",addBook,name='addBook'),
+    path("addBook/<int:id>",addBook,name='addbook'),
+    path("contri/<int:user_id>",contri,name="contri"),
+    
+    
+    
 ]
 
 if settings.DEBUG:
