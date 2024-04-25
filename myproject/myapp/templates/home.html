@@ -136,7 +136,7 @@
 			<h2>Add your book</h2>
 			<p>Help us by contributing to the wider section of the books</p>
 			{% if user.is_authenticated %}
-			<a class="btn btn-outline-success btn-lg" href="{% url 'addBook' user.id %}">Add Book</a>
+			<a class="btn btn-outline-success btn-lg" href="{% url 'addBook/' user.id %}">Add Book</a>
 			{% else %}
 
 					<!-- Button trigger modal -->

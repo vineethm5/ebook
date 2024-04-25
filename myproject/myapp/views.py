@@ -21,7 +21,7 @@ def login(req):
                 messages.info(req,"Invalid Password")
             else:
                 auth.login(req,user)
-                return redirect("home.html ")
+                return redirect("/")
     return render(req,'login.html')
 
 def signup(req):
@@ -45,9 +45,16 @@ def signup(req):
 
 
 @login_required
-def addBook(req,user_id):
-    pass
+def addBook(req,id):
+    # user=User.objects.get(id=user_id)
+    return render(req,"addbook.html")
 
 def logout(req):
     auth.logout(req)
-    return redirect("home.html")
+    return redirect("/")
+
+def contri(req,userid):
+    pass
+
+def addBook(req,userid):
+    pass
